@@ -1,9 +1,6 @@
-class Livro:
+from genero import Genero;
+from livro import Livro;
+def Main():
 
-    def __init__(self,titulo,autor,editora,quantidade,preco):
+    print("blabla");
 
-        self.titulo = titulo;
-        self.autor = autor;
-        self.editora = editora;
-        self.quantidade = quantidade
-        self.preco = preco
