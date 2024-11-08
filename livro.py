@@ -1,6 +1,10 @@
 from genero import Genero;
 from editora import Editora;
 from autor import Autor;
+import psycopg
+
+conn = psycopg.connect( dbname = "postgres" ,host = "gracelessly-native-octopus.data-1.use1.tembo.io",user = "postgres", password ="EW9Sxfvyb6Q1q4XT", port = 5432);
+print(conn.info);
 
 class Livro:
     
