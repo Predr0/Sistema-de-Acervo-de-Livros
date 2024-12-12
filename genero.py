@@ -18,6 +18,9 @@ class Genero(Conexao):
       sql = "select * from genero WHERE nome LIKE %s"
       if type_s == "id":
          sql = "SELECT * FROM genero WHERE id = %s"
+      if type_s == "all":
+         sql = "SELECT * FROM genero"
+
       self.cursor.execute(sql, args)
       data = self.cursor.fetchall()
       if data :
@@ -61,4 +64,5 @@ class Genero(Conexao):
 if __name__ == "__main__":
       
    g2 = Genero();
-   print(g2.pesquisar(1, type_s="id"))
+   print(g2.pesquisar(type_s="all"))
+   

@@ -16,6 +16,8 @@ class Editora(Conexao):
       sql = "select * from editora WHERE nome LIKE %s"
       if type_s == "id":
          sql = "SELECT * FROM editora WHERE id = %s"
+      if type_s == "all":
+         sql = "SELECT * FROM editora"
       self.cursor.execute(sql, args)
       data = self.cursor.fetchall()
       if data :
@@ -59,4 +61,4 @@ class Editora(Conexao):
 if __name__ == "__main__":
       
    e2 = Editora();
-   e2.addEditora("panini")
+   e2.addEditora("Letras")
